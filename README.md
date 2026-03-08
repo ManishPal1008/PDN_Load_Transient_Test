@@ -1,8 +1,8 @@
 # PDN Load Transient Test Automation
 
-This repository contains a Python-based automation framework used for testing the load transient response of a Power Distribution Network (PDN).
+This repository contains a Python-based automation framework for testing the load transient response of a Power Distribution Network (PDN).
 
-The test system uses SCPI commands through PyVISA to control laboratory instruments.
+The script uses PyVISA to control laboratory instruments using SCPI commands.
 
 ## Instruments Used
 
@@ -11,15 +11,15 @@ Keithley 2380 Series Electronic Load
 Keysight DSOX6004A Oscilloscope  
 Keithley DMM6500 Multimeter  
 
-## Test Workflow
+## Test Procedure
 
-1. Initialize all instruments
-2. Set power supply to 5V
+1. Initialize instruments using PyVISA
+2. Set PSU to 5V
 3. Apply step load using electronic load
-4. Capture voltage measurement using DMM
-5. Log results to CSV file
+4. Measure output voltage using DMM
+5. Log results with timestamps
 
-## Example Load Step
+## Load Step Example
 
 0.3A → 2.7A
 
@@ -29,10 +29,10 @@ Install dependencies:
 
 pip install -r requirements.txt
 
-Run the script:
+Run:
 
 python load_transient_test.py
 
 ## Output
 
-Results are saved in results.csv.
+Results are stored in results.csv
